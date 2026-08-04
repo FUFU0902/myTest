@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class OnCollisionSwitchScene2 : MonoBehaviour
+public class OnCollisionSwitchScene : MonoBehaviour
 {
 	//-------------------------------------
 	public GameObject targetObject;
