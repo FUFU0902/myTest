@@ -390,8 +390,8 @@ GameObject:
   - component: {fileID: 834421484}
   - component: {fileID: 834421485}
   - component: {fileID: 834421486}
+  - component: {fileID: 834421487}
   - component: {fileID: 834421489}
-  - component: {fileID: 834421488}
   m_Layer: 0
   m_Name: player1R_2_0
   m_TagString: Untagged
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnKeyPressMove
   speed: 5
---- !u!114 &834421488
+--- !u!114 &834421487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 834421479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b910d76beb01c74490bc19ac8dd39cf, type: 3}
+  m_Script: {fileID: 11500000, guid: c80a4213cc580534387a83c364209b3e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnCollisionStopGame
+  m_EditorClassIdentifier: Assembly-CSharp::OnCollisionStopGame2
   targetObject: {fileID: 2088450704}
   tagName: 
 --- !u!114 &834421489
@@ -1234,6 +1234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80a4213cc580534387a83c364209b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  targetObject: {fileID: 834421479}
+  tagName: 
 --- !u!1 &1446661797
 GameObject:
   m_ObjectHideFlags: 0
