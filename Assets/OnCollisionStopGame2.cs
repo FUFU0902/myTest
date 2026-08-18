@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OnCollisionStopGame : MonoBehaviour
+public class OnCollisionStopGame2 : MonoBehaviour
 {
     //-------------------------------------
     public GameObject targetObject;
