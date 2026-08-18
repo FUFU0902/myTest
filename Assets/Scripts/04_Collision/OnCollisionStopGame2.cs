@@ -1,27 +1,27 @@
-﻿using System.Collections2;
-using System.Collections2.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-// 衝突すると、表示する
-public class OnCollisionShow2 : MonoBehaviour
+// 衝突すると、ゲームをストップする
+public class OnCollisionStopGame : MonoBehaviour
 {
 	//-------------------------------------
 	public GameObject targetObject;
 	public string tagName;
-	public GameObject showObject;
 	//-------------------------------------
 
 	void Start()
 	{
-		showObject.SetActive(false);
+		Time.timeScale = 1;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
+
 		if (collision.gameObject == targetObject ||
 			collision.gameObject.tag == tagName)
 		{
-			showObject.SetActive(true); // 表示する
+			Time.timeScale = 0;
 		}
 	}
 }
