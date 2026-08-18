@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 899181684}
   - component: {fileID: 899181683}
   - component: {fileID: 899181682}
-  - component: {fileID: 899181681}
   - component: {fileID: 899181680}
   m_Layer: 0
   m_Name: player1R_0_0
@@ -153,19 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd20c23a1cb2bee468bc1a45b6f56056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &899181681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899181679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af35e83f98bd4e40b046248309f6cfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnKeyPressMove
-  speed: 5
 --- !u!114 &899181682
 MonoBehaviour:
   m_ObjectHideFlags: 0
