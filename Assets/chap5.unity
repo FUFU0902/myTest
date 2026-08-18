@@ -390,8 +390,8 @@ GameObject:
   - component: {fileID: 834421484}
   - component: {fileID: 834421485}
   - component: {fileID: 834421486}
+  - component: {fileID: 834421489}
   - component: {fileID: 834421488}
-  - component: {fileID: 834421487}
   m_Layer: 0
   m_Name: player1R_2_0
   m_TagString: Untagged
@@ -580,21 +580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnKeyPressMove
   speed: 5
---- !u!114 &834421487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834421479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f92173999a2844a8ee5af2e2b0dd60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnCollisionShow
-  targetObject: {fileID: 2088450704}
-  tagName: 
-  showObject: {fileID: 1688368409}
 --- !u!114 &834421488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +594,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OnCollisionStopGame
   targetObject: {fileID: 2088450704}
   tagName: 
+--- !u!114 &834421489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834421479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840e275774301e54fbac511e4d520158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnCollisionShow2
+  targetObject: {fileID: 2088450704}
+  tagName: 
+  showObject: {fileID: 1688368409}
 --- !u!1 &951575954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,8 +1036,8 @@ GameObject:
   - component: {fileID: 1437589556}
   - component: {fileID: 1437589555}
   - component: {fileID: 1437589559}
-  - component: {fileID: 1437589560}
   - component: {fileID: 1437589561}
+  - component: {fileID: 1437589562}
   m_Layer: 0
   m_Name: obake_0_0
   m_TagString: Untagged
@@ -1207,20 +1207,6 @@ MonoBehaviour:
   targetObject: {fileID: 834421479}
   speed: 3
   ghostMode: 0
---- !u!114 &1437589560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437589554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b910d76beb01c74490bc19ac8dd39cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnCollisionShow
-  targetObject: {fileID: 0}
-  tagName: 
 --- !u!114 &1437589561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1217,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 840e275774301e54fbac511e4d520158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  targetObject: {fileID: 834421479}
+  tagName: 
+  showObject: {fileID: 57835879}
+--- !u!114 &1437589562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437589554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a4213cc580534387a83c364209b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
 --- !u!1 &1446661797
