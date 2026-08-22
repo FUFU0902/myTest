@@ -30,3 +30,7 @@ public class OnKeyPressMove2 : MonoBehaviour
         rbody.linearVelocity = moveInput * speed;
     }
 }
+
+public class InputValue
+{
+}
