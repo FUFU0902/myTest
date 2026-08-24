@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class OnMouseClickCountChange : MonoBehaviour
 {
-	//-------------------------------------
-	public CounterType kind = CounterType.Keys; //［カウンターの種類］
-	public int addValue = 1; //［増加量］
-	//-------------------------------------
+    //-------------------------------------
+    public CounterType kind = CounterType.Keys; //［カウンターの種類］
+    public int addValue = 1; //［増加量］
+                             //-------------------------------------
     public void OnClick(InputValue value)
     {
         if (value.isPressed)   // 押された瞬間

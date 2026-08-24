@@ -33,6 +33,7 @@ public class OnKeyPressMove2 : MonoBehaviour
 
 public class InputValue
 {
+    internal bool isPressed;
     private Vector2 vector;
 
     public InputValue(Vector2 value)
