@@ -1,48 +1,33 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class OnKeyPressMove2 : MonoBehaviour
+[RequireComponent(typeof(PlayerInput))]
+
+// キーを押すと、スプライトが移動する
+public class OnKeyPressMoveSprite : MonoBehaviour
 {
-
-    public float speed = 5f;
-    private Vector2 moveInput;
-    private Rigidbody2D rbody;
-    private SpriteRenderer sr;
+    //-------------------------------------
+    public float speed = 5f; //［速度］
+                             //-------------------------------------
+    private Vector2 currentMoveInput;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-        rbody = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        rbody.gravityScale = 0;
-
-        rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void OnMove(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
-
-        if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
+        currentMoveInput = value.Get<Vector2>();
+        // 移動方向にキャラを向ける
+        if (currentMoveInput.x != 0) spriteRenderer.flipX = currentMoveInput.x < 0;
     }
 
     void FixedUpdate()
     {
-
-        rbody.linearVelocity = moveInput * speed;
-    }
-}
-
-public class InputValue
-{
-    internal bool isPressed;
-    private Vector2 vector;
-
-    public InputValue(Vector2 value)
-    {
-        vector = value;
-    }
-
-    public T Get<T>() where T : struct
-    {
-        return (T)(object)vector;
+        // 位置を直接更新して移動
+        Vector2 delta = currentMoveInput * speed * Time.fixedDeltaTime;
+        transform.Translate(delta.x, delta.y, 0);
     }
 }
