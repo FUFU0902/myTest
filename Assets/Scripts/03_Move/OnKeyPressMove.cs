@@ -25,7 +25,7 @@ public class OnKeyPressMove : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        // 移動方向にキャラを向ける
+        // 移動方向にキャラを向け
         if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
     }
 

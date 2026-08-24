@@ -33,4 +33,15 @@ public class OnKeyPressMove2 : MonoBehaviour
 
 public class InputValue
 {
+    private Vector2 vector;
+
+    public InputValue(Vector2 value)
+    {
+        vector = value;
+    }
+
+    public T Get<T>() where T : struct
+    {
+        return (T)(object)vector;
+    }
 }
