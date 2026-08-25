@@ -1,33 +1,36 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerInput))]
-
-// キーを押すと、スプライトが移動する
-public class OnKeyPressMoveSprite : MonoBehaviour 
+namespace MyTest
 {
-	//-------------------------------------
-	public float speed = 5f; //［速度］
-	//-------------------------------------
-    private Vector2 moveInput;
-    private SpriteRenderer sr;
+    [RequireComponent(typeof(PlayerInput))]
 
-    void Awake()
+    // キーを押すと、スプライトが移動する
+    public class OnKeyPressMoveSprite : MonoBehaviour 
     {
-        sr = GetComponent<SpriteRenderer>();
-    }
+        //-------------------------------------
+        public float speed = 5f; //［速度］
+        //-------------------------------------
+        private Vector2 moveInput;
+        private SpriteRenderer sr;
 
-    public void OnMove(InputValue value)
-    {
-        moveInput = value.Get<Vector2>();
-        // 移動方向にキャラを向ける
-        if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
-    }
+        void Awake()
+        {
+            sr = GetComponent<SpriteRenderer>();
+        }
 
-    void FixedUpdate()
-    {
-        // 位置を直接更新して移動
-        Vector2 delta = moveInput * speed * Time.fixedDeltaTime;
-        transform.Translate(delta.x, delta.y, 0);
+        public void OnMove(InputValue value)
+        {
+            moveInput = value.Get<Vector2>();
+            // 移動方向にキャラを向ける
+            if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
+        }
+
+        void FixedUpdate()
+        {
+            // 位置を直接更新して移動
+            Vector2 delta = moveInput * speed * Time.fixedDeltaTime;
+            transform.Translate(delta.x, delta.y, 0);
+        }
     }
 }
