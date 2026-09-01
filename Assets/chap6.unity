@@ -2227,7 +2227,6 @@ GameObject:
   - component: {fileID: 899181682}
   - component: {fileID: 899181680}
   - component: {fileID: 899181687}
-  - component: {fileID: 899181688}
   - component: {fileID: 899181689}
   - component: {fileID: 899181690}
   m_Layer: 0
@@ -2440,21 +2439,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &899181688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899181679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8072add7dc9b6d14f852da2f3caf1f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnArrowKeyPressChangeAnime
-  upAnime: walkeU
-  downAnime: walkD
-  rightAnime: walk
 --- !u!111 &899181689
 Animation:
   m_ObjectHideFlags: 0
