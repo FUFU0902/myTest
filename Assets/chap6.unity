@@ -2467,6 +2467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d68db53dc2f3784f870bdcca9ea9e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  upAnime: walkeU
+  downAnime: walkD
+  rightAnime: walk
 --- !u!1 &901783120
 GameObject:
   m_ObjectHideFlags: 0
