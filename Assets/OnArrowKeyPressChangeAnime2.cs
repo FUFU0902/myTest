@@ -20,7 +20,7 @@ public class OnArrowKeyPressChangeAnime2 : MonoBehaviour
         nowMode = downAnime;
     }
 
-    public void Update(InputValue value)
+    public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>();
 
@@ -35,12 +35,12 @@ public class OnArrowKeyPressChangeAnime2 : MonoBehaviour
         else if (moveInput.x != 0)
         {
             nowMode = rightAnime;
+        }
+        if (nowMode != oldMode)
+        {
+            oldMode = nowMode;
+            animator.Play(nowMode);
 
-            if (nowMode != oldMode)
-            {
-                oldMode = nowMode;
-                animator.Play(nowMode);
-            }
         }
 
     }
