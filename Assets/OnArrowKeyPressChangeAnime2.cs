@@ -20,7 +20,7 @@ public class OnArrowKeyPressChangeAnime2 : MonoBehaviour
         nowMode = downAnime;
     }
 
-    public void OnMove(InputValue value)
+    public void Update(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>();
 
