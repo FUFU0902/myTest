@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 
 // キーを押すと、スプライトが移動する
-public class OnKeyPressMoveSprite : MonoBehaviour
+public class OnKeyPressMoveSprite2 : MonoBehaviour
 {
     //-------------------------------------
     public float speed = 5f; //［速度］
