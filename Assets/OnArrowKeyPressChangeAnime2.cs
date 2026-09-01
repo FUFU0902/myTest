@@ -42,4 +42,7 @@ public class OnArrowKeyPressChangeAnime2 : MonoBehaviour
                 animator.Play(nowMode);
             }
         }
+
     }
+}
+
