@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-// マウスでクリックしたら、シーンを切り替える
 public class OnMouseDownSwitchScene2 : MonoBehaviour
 {
     public string sceneName;
@@ -15,19 +14,18 @@ public class OnMouseDownSwitchScene2 : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            if (Camera.main == null)
-            {
-                return;
-            }
 
-            var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
-            if (hit.collider != null && hit.collider.gameObject == gameObject)
-            {
-                SceneManager.LoadScene(sceneName: GetSceneName1());
-            }
+        if (Camera.main == null)
+        {
+            return;
+        }
+
+        var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
+        {
+            SceneManager.LoadScene(sceneName: GetSceneName1());
         }
     }
 }
+
