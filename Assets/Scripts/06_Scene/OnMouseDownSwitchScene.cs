@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 // マウスでクリックしたら、シーンを切り替える
-public class OnMouseDownSwitchScene : MonoBehaviour 
+public class OnMouseDownSwitchScene : MonoBehaviour
 {
     //-------------------------------------
     public string sceneName;  //［シーン名］
