@@ -7,8 +7,12 @@ public class OnMouseDownSwitchScene2 : MonoBehaviour
 {
     public string sceneName;
 
+    private string GetSceneName1()
+    {
+        return sceneName;
+    }
 
-    void Update()
+    void Update(string sceneName1)
     {
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -17,7 +21,7 @@ public class OnMouseDownSwitchScene2 : MonoBehaviour
             var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
             if (hit.collider && hit.collider.gameObject == gameObject)
             {
-                SceneManager.LoadScene(sceneName: sceneName);
+                SceneManager.LoadScene(sceneName: sceneName1);
             }
         }
     }
