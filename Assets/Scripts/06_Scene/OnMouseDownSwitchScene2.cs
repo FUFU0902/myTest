@@ -14,7 +14,7 @@ public class OnMouseDownSwitchScene2 : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
-            if (!hit.collider || hit.collider.gameObject != gameObject)
+            if (hit.collider && hit.collider.gameObject == gameObject)
             {
                 SceneManager.LoadScene(sceneName);
             }
