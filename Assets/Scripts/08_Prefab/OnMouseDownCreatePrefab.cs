@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
 // タッチすると、そこにプレハブを作る
-public class OnMouseDownCreatePrefab : MonoBehaviour 
+public class OnMouseDownCreatePrefab : MonoBehaviour
 {
     //-------------------------------------
     public GameObject newPrefab; //［作るプレハブ］
     public int newZ = -5;        //［描画順］
     //-------------------------------------
 
-    void Update() 
+    void Update()
     {
         // タッチしたら
         if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
@@ -18,8 +18,8 @@ public class OnMouseDownCreatePrefab : MonoBehaviour
             Vector2 screenPos = Pointer.current.position.ReadValue();
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(
                 new Vector3(screenPos.x, screenPos.y, Camera.main.nearClipPlane));
-            worldPos.z = newZ;
-            // プレハブを作る
+
+            // プレハブを作る            worldPos.z = newZ;
             Instantiate(newPrefab, worldPos, Quaternion.identity);
         }
     }
