@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89125235cacd63f4f85b6b11c7d4b4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneName: gamukuria
+  sceneName: gemukuria
 --- !u!61 &1396438351
 BoxCollider2D:
   m_ObjectHideFlags: 0
