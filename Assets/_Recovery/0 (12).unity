@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89125235cacd63f4f85b6b11c7d4b4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnMouseDownSwitchScene2
-  sceneName: ge-muo-ba-
+  sceneName: gamuo-ba-
 --- !u!212 &1976159450
 SpriteRenderer:
   serializedVersion: 2
