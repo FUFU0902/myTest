@@ -7,9 +7,18 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/chap7.unity
-    guid: c75e68211eeda0641923f49d26651338
+    guid: 884c4332d604bb44482c7a47b8896420
   - enabled: 1
     path: Assets/gemukuria.unity
     guid: 611167189b21c1f40a5b7b500fccbbd3
+  - enabled: 1
+    path: Assets/gamuo-ba-.unity
+    guid: e6d7d44e9fae17e46ac649af462d7825
+  - enabled: 0
+    path: Assets/_Recovery/0 (13).unity
+    guid: 1a5f61cc45cc8b940b0a7da69430a30b
+  - enabled: 0
+    path: Assets/_Recovery/0 (11).unity
+    guid: 3dd2e1fea5fa50f46a7531c6edcc1568
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
