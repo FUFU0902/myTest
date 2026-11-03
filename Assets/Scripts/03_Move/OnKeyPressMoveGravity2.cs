@@ -20,4 +20,14 @@ public class OnKeyPressMove2 : MonoBehaviour
 
         rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
+
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
+        if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
+    }
+    void FixedUpdate()
+    {
+        rbody.linearVelocity = moveInput * speed;
+    }
 }
