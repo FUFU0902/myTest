@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PingPongRidableFloor2 : MonoBehaviour
 {
+    public float speed = 1.0f;
+    public float moveTime = 2.0f;
+
     private Rigidbody2D rbody;
-    private float timer;
-    private float speed = 2f;
-    private float moveTime = 1f;
+    private float timer = 0.0f;
     private readonly List<GameObject> childObjects = new List<GameObject>();
 
 
