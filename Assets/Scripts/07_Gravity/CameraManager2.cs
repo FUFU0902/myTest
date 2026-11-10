@@ -9,7 +9,7 @@ public class CameraManager2 : MonoBehaviour
     public bool smoothFollow = false;
     public float smoothSpeed = 4f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void lateUpdate2()
+    void LateUpdate2()
     {
         if (player == null) return;
         Vector3 playerPos = player.transform.position;
