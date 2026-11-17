@@ -6,10 +6,10 @@ public class CameraManager2 : MonoBehaviour
     public Vector2 offset;
     public float xlimit = 0;
     public bool followHOnly = true;
-    public bool smoothFollow = false;
+    public bool smoothFollow2 = false;
     public float smoothSpeed = 4f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void LateUpdate2()
+    void LateUpdate()
     {
         if (player == null) return;
         Vector3 playerPos = player.transform.position;
@@ -23,9 +23,9 @@ public class CameraManager2 : MonoBehaviour
         }
         else
         {
-            desiredPos = new Vector3(vx, playerPos.y + offset.y, vx);
+            desiredPos = new Vector3(vx, playerPos.y + offset.y, vz);
         }
-        if (smoothFollow)
+        if (smoothFollow2)
         {
             Vector3 smoothedPos = Vector3.Lerp(transform.position,
             desiredPos, smoothSpeed * Time.deltaTime);
